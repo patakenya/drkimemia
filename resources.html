@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartWise - Resources</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e63946',
+                        secondary: '#457b9d'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="flex items-center">
+                    <span class="text-primary text-3xl font-['Pacifico']">Dr Kimemia</span>
+                    <div class="w-8 h-8 flex items-center justify-center ml-1">
+                        <i class="ri-heart-pulse-fill text-primary ri-lg"></i>
+                    </div>
+                </div>
+                <nav class="hidden md:flex ml-10">
+                    <ul class="flex space-x-8">
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Home</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Diseases</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Prevention</a></li>
+                        <li><a href="#" class="text-primary font-medium">Resources</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search health topics..." class="pl-10 pr-4 py-2 rounded-full text-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary w-64">
+                    <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+                        <i class="ri-search-line"></i>
+                    </div>
+                </div>
+                <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-button flex items-center whitespace-nowrap">
+                    <div class="w-5 h-5 flex items-center justify-center mr-2">
+                        <i class="ri-phone-fill"></i>
+                    </div>
+                    Emergency
+                </button>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center py-20" style="background-image: url('https://readdy.ai/api/search-image?query=A%20professional%20medical%20background%20with%20a%20gradient%20from%20white%20to%20soft%20blue%2C%20featuring%20subtle%20heart%20and%20medical%20symbols.%20The%20left%20side%20should%20be%20completely%20white%20or%20very%20light%20for%20text%20placement%2C%20while%20the%20right%20side%20can%20show%20a%20stylized%20anatomical%20heart%20illustration%20with%20blood%20vessels.%20The%20transition%20must%20be%20natural%20and%20seamless.&width=1600&height=800&seq=1&orientation=landscape');">
+        <div class="container mx-auto px-4 w-full">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">Expert Resources for Heart Health</h1>
+                    <p class="text-lg text-gray-700 mb-8 max-w-lg">Access trusted videos, research summaries, downloadable guides, and FAQs to empower your journey in managing and preventing non-communicable diseases.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">Browse Resources</button>
+                        <button class="bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 py-3 px-6 rounded-button font-medium whitespace-nowrap">Take Risk Assessment</button>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- The hero image is already in the background -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Resources Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Expert Resources</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore a curated collection of videos, research, and tools from leading cardiovascular and public health experts to support your health goals.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Video Consultations</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="relative rounded-lg overflow-hidden bg-gray-100 h-48">
+                                    <img src="https://readdy.ai/api/search-image?query=A%20professional%20female%20cardiologist%20in%20a%20white%20coat%20explaining%20heart%20health%20to%20the%20camera%20in%20a%20medical%20office%20setting%20with%20medical%20charts%20visible%20in%20the%20background.%20The%20doctor%20should%20have%20a%20stethoscope%20and%20appear%20to%20be%20giving%20expert%20medical%20advice%20in%20a%20friendly%2C%20approachable%20manner.&width=600&height=400&seq=6&orientation=landscape" alt="Cardiologist explaining heart health" class="w-full h-full object-cover object-top">
+                                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                        <div class="w-16 h-16 flex items-center justify-center bg-white bg-opacity-90 rounded-full cursor-pointer">
+                                            <i class="ri-play-fill text-primary ri-2x"></i>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                                        <h4 class="text-white font-medium">Understanding Heart Disease Risk Factors</h4>
+                                        <p class="text-white text-sm opacity-80">Dr. Emily Richardson, Cardiologist</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="relative rounded-lg overflow-hidden bg-gray-100 h-48">
+                                    <img src="https://readdy.ai/api/search-image?query=A%20male%20endocrinologist%20in%20professional%20attire%20discussing%20diabetes%20management%20with%20visual%20aids%20in%20the%20background.%20The%20doctor%20should%20be%20in%20a%20clinical%20setting%20with%20diabetes%20educational%20materials%20visible%2C%20appearing%20knowledgeable%20and%20engaging%20while%20explaining%20medical%20concepts.&width=600&height=400&seq=7&orientation=landscape" alt="Endocrinologist discussing diabetes" class="w-full h-full object-cover object-top">
+                                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                        <div class="w-16 h-16 flex items-center justify-center bg-white bg-opacity-90 rounded-full cursor-pointer">
+                                            <i class="ri-play-fill text-primary ri-2x"></i>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                                        <h4 class="text-white font-medium">Diabetes Management Strategies</h4>
+                                        <p class="text-white text-sm opacity-80">Dr. Michael Chen, Endocrinologist</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Scientific Research Summaries</h3>
+                                <div class="space-y-4">
+                                    <div class="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                                        <div class="flex items-start">
+                                            <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 flex-shrink-0">
+                                                <i class="ri-file-text-line text-blue-600"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-medium text-gray-900 mb-1">New England Journal of Medicine</h4>
+                                                <p class="text-gray-600 text-sm mb-2">Long-Term Effects of Lifestyle Intervention on Cardiovascular Health</p>
+                                                <div class="flex items-center text-xs text-gray-500">
+                                                    <span>Published: March 15, 2025</span>
+                                                    <span class="mx-2">•</span>
+                                                    <a href="#" class="text-primary hover:underline">Read Summary</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                                        <div class="flex items-start">
+                                            <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 flex-shrink-0">
+                                                <i class="ri-file-text-line text-blue-600"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-medium text-gray-900 mb-1">The Lancet</h4>
+                                                <p class="text-gray-600 text-sm mb-2">Global Burden of Hypertension and Projections for 2030</p>
+                                                <div class="flex items-center text-xs text-gray-500">
+                                                    <span>Published: January 22, 2025</span>
+                                                    <span class="mx-2">•</span>
+                                                    <a href="#" class="text-primary hover:underline">Read Summary</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                                        <div class="flex items-start">
+                                            <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 flex-shrink-0">
+                                                <i class="ri-file-text-line text-blue-600"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-medium text-gray-900 mb-1">Journal of the American Heart Association</h4>
+                                                <p class="text-gray-600 text-sm mb-2">Comparative Effectiveness of Blood Pressure-Lowering Drugs</p>
+                                                <div class="flex items-center text-xs text-gray-500">
+                                                    <span>Published: April 5, 2025</span>
+                                                    <span class="mx-2">•</span>
+                                                    <a href="#" class="text-primary hover:underline">Read Summary</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Downloadable Resources</h3>
+                            <div class="space-y-4">
+                                <a href="#" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                                    <div class="w-10 h-10 flex items-center justify-center bg-red-100 rounded-full mr-4 flex-shrink-0">
+                                        <i class="ri-file-pdf-line text-red-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Heart Health Guide</h4>
+                                        <p class="text-xs text-gray-500">PDF • 4.2 MB</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                                    <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full mr-4 flex-shrink-0">
+                                        <i class="ri-file-excel-line text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Blood Pressure Tracker</h4>
+                                        <p class="text-xs text-gray-500">Excel • 1.8 MB</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                                    <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 flex-shrink-0">
+                                        <i class="ri-file-word-line text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Diabetes Management Plan</h4>
+                                        <p class="text-xs text-gray-500">Word • 950 KB</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+                                    <div class="w-10 h-10 flex items-center justify-center bg-purple-100 rounded-full mr-4 flex-shrink-0">
+                                        <i class="ri-vidicon-line text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Stroke Recognition Video</h4>
+                                        <p class="text-xs text-gray-500">MP4 • 78 MB</p>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="mt-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Frequently Asked Questions</h3>
+                                <div class="space-y-3">
+                                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                                        <button class="w-full flex items-center justify-between p-4 text-left focus:outline-none" id="faq-btn-1">
+                                            <span class="font-medium text-gray-900">What is the DASH diet?</span>
+                                            <div class="w-6 h-6 flex items-center justify-center" id="faq-icon-1">
+                                                <i class="ri-add-line"></i>
+                                            </div>
+                                        </button>
+                                        <div class="px-4 pb-4 hidden" id="faq-content-1">
+                                            <p class="text-gray-600 text-sm">The DASH (Dietary Approaches to Stop Hypertension) diet is a flexible and balanced eating plan that helps create a heart-healthy eating style for life. It’s rich in fruits, vegetables, whole grains, and low-fat dairy foods; includes meat, fish, poultry, nuts, and beans; and limits sugar-sweetened foods, red meat, and added fats.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                                        <button class="w-full flex items-center justify-between p-4 text-left focus:outline-none" id="faq-btn-2">
+                                            <span class="font-medium text-gray-900">How often should I check my blood pressure?</span>
+                                            <div class="w-6 h-6 flex items-center justify-center" id="faq-icon-2">
+                                                <i class="ri-add-line"></i>
+                                            </div>
+                                        </button>
+                                        <div class="px-4 pb-4 hidden" id="faq-content-2">
+                                            <p class="text-gray-600 text-sm">If your blood pressure is normal (less than 120/80 mm Hg), check it every year or more often as your doctor suggests. If elevated, your doctor may recommend more frequent checks. Home monitoring can also help manage your blood pressure.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                                        <button class="w-full flex items-center justify-between p-4 text-left focus:outline-none" id="faq-btn-3">
+                                            <span class="font-medium text-gray-900">What are the warning signs of a stroke?</span>
+                                            <div class="w-6 h-6 flex items-center justify-center" id="faq-icon-3">
+                                                <i class="ri-add-line"></i>
+                                            </div>
+                                        </button>
+                                        <div class="px-4 pb-4 hidden" id="faq-content-3">
+                                            <p class="text-gray-600 text-sm">Remember the acronym FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Other signs include sudden numbness, confusion, trouble seeing, difficulty walking, or severe headache.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="bg-primary/10 p-8 rounded-lg shadow-sm text-center">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Empower Your Health Journey</h3>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Use these resources to stay informed, track your progress, and take proactive steps. Consult a healthcare provider for personalized advice.</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">Take Risk Assessment</button>
+                    <button class="bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 py-3 px-6 rounded-button font-medium whitespace-nowrap">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-['Pacifico'] text-white">Dr Kimemia</span>
+                        <div class="w-6 h-6 flex items-center justify-center ml-1">
+                            <i class="ri-heart-pulse-fill text-primary ri-lg"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Providing evidence-based information on heart health and non-communicable diseases since 2010.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-instagram-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-youtube-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Heart Disease</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Diabetes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Hypertension</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Stroke</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Research Papers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Health Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Video Library</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Risk Assessment Tools</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Information</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">123 Medical Center Drive<br>Boston, MA 02115</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">info@heartwise.org</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400">+1 (617) 555-0123</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Dr Kimemia. All rights reserved. Last updated: June 8, 2025</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Medical Disclaimer</a>
+                    </div>
+                </div>
+                <p class="text-gray-500 text-xs mt-4">The information provided on this website is for general informational and educational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script id="faq-functionality">
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ accordion functionality
+            const faqButtons = ['faq-btn-1', 'faq-btn-2', 'faq-btn-3'];
+            
+            faqButtons.forEach((id, index) => {
+                const button = document.getElementById(id);
+                const content = document.getElementById(`faq-content-${index + 1}`);
+                const icon = document.getElementById(`faq-icon-${index + 1}`);
+                
+                if (button && content && icon) {
+                    button.addEventListener('click', function() {
+                        if (content.classList.contains('hidden')) {
+                            content.classList.remove('hidden');
+                            icon.innerHTML = '<i class="ri-subtract-line"></i>';
+                        } else {
+                            content.classList.add('hidden');
+                            icon.innerHTML = '<i class="ri-add-line"></i>';
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

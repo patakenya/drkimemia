@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartWise - About Us</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e63946',
+                        secondary: '#457b9d'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="flex items-center">
+                    <span class="text-primary text-3xl font-['Pacifico']">Dr Kimemia</span>
+                    <div class="w-8 h-8 flex items-center justify-center ml-1">
+                        <i class="ri-heart-pulse-fill text-primary ri-lg"></i>
+                    </div>
+                </div>
+                <nav class="hidden md:flex ml-10">
+                    <ul class="flex space-x-8">
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Home</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Diseases</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Prevention</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Resources</a></li>
+                        <li><a href="#" class="text-primary font-medium">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search health topics..." class="pl-10 pr-4 py-2 rounded-full text-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary w-64">
+                    <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+                        <i class="ri-search-line"></i>
+                    </div>
+                </div>
+                <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-button flex items-center whitespace-nowrap">
+                    <div class="w-5 h-5 flex items-center justify-center mr-2">
+                        <i class="ri-phone-fill"></i>
+                    </div>
+                    Emergency
+                </button>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center py-20" style="background-image: url('https://readdy.ai/api/search-image?query=A%20professional%20medical%20background%20with%20a%20gradient%20from%20white%20to%20soft%20blue%2C%20featuring%20subtle%20heart%20and%20medical%20symbols.%20The%20left%20side%20should%20be%20completely%20white%20or%20very%20light%20for%20text%20placement%2C%20while%20the%20right%20side%20can%20show%20a%20stylized%20anatomical%20heart%20illustration%20with%20blood%20vessels.%20The%20transition%20must%20be%20natural%20and%20seamless.&width=1600&height=800&seq=1&orientation=landscape');">
+        <div class="container mx-auto px-4 w-full">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">About Dr Kimemia</h1>
+                    <p class="text-lg text-gray-700 mb-8 max-w-lg">Learn about our mission to empower individuals with knowledge and resources to prevent and manage non-communicable diseases like heart disease, diabetes, hypertension, and stroke.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">Our Mission</button>
+                        <button class="bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 py-3 px-6 rounded-button font-medium whitespace-nowrap">Contact Us</button>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- The hero image is already in the background -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Dr Kimemia Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="h-64 md:h-96 bg-cover bg-center rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=A%20professional%20portrait%20of%20a%20cardiologist%20in%20a%20white%20coat%20with%20a%20stethoscope%2C%20standing%20in%20a%20modern%20medical%20office%20with%20a%20confident%20and%20approachable%20expression.%20The%20background%20should%20include%20subtle%20medical%20equipment%20and%20charts%2C%20with%20a%20clean%20and%20professional%20look.&width=600&height=800&seq=8&orientation=portrait');"></div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Who We Are</h2>
+                    <p class="text-gray-600 mb-4">Founded by Dr. John Kimemia, a renowned cardiologist with over 20 years of experience, HeartWise is dedicated to raising awareness about non-communicable diseases (NCDs). Our initiative began in 2010 with a vision to provide accessible, evidence-based information to help individuals prevent and manage heart disease, diabetes, hypertension, and stroke.</p>
+                    <p class="text-gray-600 mb-6">Dr. Kimemia’s passion for patient education drives our commitment to delivering trusted resources, from scientific research to practical tools, empowering communities worldwide to take control of their health.</p>
+                    <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Mission & Vision</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We strive to transform lives through education, prevention, and empowerment, creating a healthier world free from the burden of NCDs.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <i class="ri-lightbulb-line text-primary ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Our Mission</h3>
+                    <p class="text-gray-600">To provide accurate, accessible, and actionable information on NCDs, enabling individuals to make informed decisions about their health and prevent life-threatening conditions through education and early intervention.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-full mb-4">
+                        <i class="ri-eye-line text-secondary ri-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Our Vision</h3>
+                    <p class="text-gray-600">A world where NCDs are significantly reduced through widespread awareness, proactive prevention, and equitable access to health resources, fostering vibrant and healthy communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our dedicated team of medical professionals and health educators works together to bring you reliable and impactful health resources.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=A%20professional%20portrait%20of%20a%20male%20cardiologist%20in%20a%20white%20coat%20with%20a%20stethoscope%2C%20smiling%20confidently%20in%20a%20modern%20medical%20office%20with%20subtle%20medical%20equipment%20in%20the%20background.&width=600&height=400&seq=9&orientation=landscape');"></div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-1">Dr. John Kimemia</h4>
+                        <p class="text-sm text-gray-600 mb-4">Founder & Cardiologist</p>
+                        <p class="text-gray-600 text-sm">Dr. Kimemia is a board-certified cardiologist with a passion for preventive care and patient education, leading our mission to combat NCDs.</p>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=A%20professional%20portrait%20of%20a%20female%20endocrinologist%20in%20a%20white%20coat%2C%20standing%20in%20a%20clinical%20setting%20with%20a%20warm%20and%20approachable%20expression.%20The%20background%20should%20include%20diabetes%20educational%20materials.&width=600&height=400&seq=10&orientation=landscape');"></div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-1">Dr. Sarah Mwangi</h4>
+                        <p class="text-sm text-gray-600 mb-4">Endocrinologist</p>
+                        <p class="text-gray-600 text-sm">Dr. Mwangi specializes in diabetes management, contributing expert insights to our educational content and resources.</p>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=A%20professional%20portrait%20of%20a%20public%20health%20educator%20in%20business%20attire%2C%20standing%20in%20a%20modern%20office%20with%20health%20posters%20in%20the%20background%2C%20with%20an%20engaging%20and%20confident%20demeanor.&width=600&height=400&seq=11&orientation=landscape');"></div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-1">Ms. Amina Otieno</h4>
+                        <p class="text-sm text-gray-600 mb-4">Public Health Educator</p>
+                        <p class="text-gray-600 text-sm">Ms. Otieno designs community outreach programs and ensures our resources are accessible and understandable to all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="bg-primary/10 p-8 rounded-lg shadow-sm text-center">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Join Our Mission</h3>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Get involved by exploring our resources, sharing knowledge, or contacting us to collaborate on creating a healthier future.</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">Explore Resources</button>
+                    <button class="bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 py-3 px-6 rounded-button font-medium whitespace-nowrap">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-['Pacifico'] text-white">Dr Kimemia</span>
+                        <div class="w-6 h-6 flex items-center justify-center ml-1">
+                            <i class="ri-heart-pulse-fill text-primary ri-lg"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Providing evidence-based information on heart health and non-communicable diseases since 2010.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-instagram-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-youtube-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Heart Disease</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Diabetes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Hypertension</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Stroke</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Research Papers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Health Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Video Library</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Risk Assessment Tools</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Information</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">123 Medical Center Drive<br>Boston, MA 02115</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">info@heartwise.org</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400">+1 (617) 555-0123</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Dr Kimemia. All rights reserved. Last updated: June 8, 2025</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Medical Disclaimer</a>
+                    </div>
+                </div>
+                <p class="text-gray-500 text-xs mt-4">The information provided on this website is for general informational and educational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

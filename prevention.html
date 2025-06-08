@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartWise - Prevention</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e63946',
+                        secondary: '#457b9d'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="flex items-center">
+                    <span class="text-primary text-3xl font-['Pacifico']">Dr Kimemia</span>
+                    <div class="w-8 h-8 flex items-center justify-center ml-1">
+                        <i class="ri-heart-pulse-fill text-primary ri-lg"></i>
+                    </div>
+                </div>
+                <nav class="hidden md:flex ml-10">
+                    <ul class="flex space-x-8">
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Home</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Diseases</a></li>
+                        <li><a href="#" class="text-primary font-medium">Prevention</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Resources</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search health topics..." class="pl-10 pr-4 py-2 rounded-full text-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary w-64">
+                    <div class="search-icon absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+                        <i class="ri-search-line"></i>
+                    </div>
+                </div>
+                <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-button flex items-center whitespace-nowrap">
+                    <div class="w-5 h-5 flex items-center justify-center mr-2">
+                        <i class="ri-phone-fill"></i>
+                    </div>
+                    Emergency
+                </button>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center py-20" style="background-image: url('https://readdy.ai/api/search-image?query=A%20professional%20medical%20background%20with%20a%20gradient%20from%20white%20to%20soft%20blue%2C%20featuring%20subtle%20heart%20and%20medical%20symbols.%20The%20left%20side%20should%20be%20completely%20white%20or%20very%20light%20for%20text%20placement%2C%20while%20the%20right%20side%20can%20show%20a%20stylized%20anatomical%20heart%20illustration%20with%20blood%20vessels.%20The%20transition%20must%20be%20natural%20and%20seamless.&width=1600&height=800&seq=1&orientation=landscape');">
+        <div class="container mx-auto px-4 w-full">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">Preventing Non-Communicable Diseases</h1>
+                    <p class="text-lg text-gray-700 mb-8 max-w-lg">Proactive lifestyle changes and medical monitoring can significantly reduce your risk of heart disease, diabetes, hypertension, and stroke. Start your journey to better health today.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">Explore Guidelines</button>
+                        <button class="bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 py-3 px-6 rounded-button font-medium whitespace-nowrap">Take Risk Assessment</button>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- The hero image is already in the background -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Guidelines -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Prevention Guidelines</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Adopt these evidence-based strategies to lower your risk of NCDs and improve your overall well-being. Small changes can make a big difference.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3">
+                            <i class="ri-heart-pulse-line text-primary"></i>
+                        </div>
+                        Lifestyle Modifications
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition">
+                            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-4 flex-shrink-0">
+                                <span class="text-blue-600 font-semibold">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-1">Regular Physical Activity</h4>
+                                <p class="text-gray-600 text-sm">Aim for at least 150 minutes of moderate-intensity aerobic activity (e.g., brisk walking) or 75 minutes of vigorous activity (e.g., running) weekly, plus muscle-strengthening exercises twice a week.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition">
+                            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-4 flex-shrink-0">
+                                <span class="text-blue-600 font-semibold">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-1">Healthy Diet</h4>
+                                <p class="text-gray-600 text-sm">Focus on fruits, vegetables, whole grains, lean proteins, and healthy fats. Limit sodium to 2,300 mg/day, added sugars, and saturated fats. Consider the Mediterranean or DASH diet.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition">
+                            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-4 flex-shrink-0">
+                                <span class="text-blue-600 font-semibold">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-1">Tobacco Cessation</h4>
+                                <p class="text-gray-600 text-sm">Quit smoking and avoid secondhand smoke. After one year of quitting, your risk of heart disease drops by 50%. Seek support from helplines or programs.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition">
+                            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-4 flex-shrink-0">
+                                <span class="text-blue-600 font-semibold">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-1">Limit Alcohol Consumption</h4>
+                                <p class="text-gray-600 text-sm">Drink in moderation: up to one drink per day for women, two for men. Excessive alcohol raises blood pressure and contributes to heart disease.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition">
+                            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-4 flex-shrink-0">
+                                <span class="text-blue-600 font-semibold">5</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-1">Stress Management</h4>
+                                <p class="text-gray-600 text-sm">Practice mindfulness, meditation, deep breathing, or yoga. Chronic stress increases cortisol, impacting blood pressure and heart health.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full mr-3">
+                            <i class="ri-stethoscope-line text-green-600"></i>
+                        </div>
+                        Medical Monitoring
+                    </h3>
+                    
+                    <div class="mb-8">
+                        <h4 class="font-medium text-gray-900 mb-3">Risk Assessment Checklist</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <label class="flex items-center cursor-pointer">
+                                    <div class="relative">
+                                        <input type="checkbox" class="sr-only" id="check1">
+                                        <div class="w-5 h-5 border border-gray-300 rounded bg-white"></div>
+                                        <div class="absolute inset-0 hidden w-5 h-5 flex items-center justify-center bg-primary rounded" id="check1-bg">
+                                            <i class="ri-check-line text-white ri-sm"></i>
+                                        </div>
+                                    </div>
+                                    <span class="ml-3 text-gray-700">Regular blood pressure checks</span>
+                                </label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <label class="flex items-center cursor-pointer">
+                                    <div class="relative">
+                                        <input type="checkbox" class="sr-only" id="check2">
+                                        <div class="w-5 h-5 border border-gray-300 rounded bg-white"></div>
+                                        <div class="absolute inset-0 hidden w-5 h-5 flex items-center justify-center bg-primary rounded" id="check2-bg">
+                                            <i class="ri-check-line text-white ri-sm"></i>
+                                        </div>
+                                    </div>
+                                    <span class="ml-3 text-gray-700">Annual cholesterol screening</span>
+                                </label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <label class="flex items-center cursor-pointer">
+                                    <div class="relative">
+                                        <input type="checkbox" class="sr-only" id="check3">
+                                        <div class="w-5 h-5 border border-gray-300 rounded bg-white"></div>
+                                        <div class="absolute inset-0 hidden w-5 h-5 flex items-center justify-center bg-primary rounded" id="check3-bg">
+                                            <i class="ri-check-line text-white ri-sm"></i>
+                                        </div>
+                                    </div>
+                                    <span class="ml-3 text-gray-700">Blood glucose testing</span>
+                                </label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <label class="flex items-center cursor-pointer">
+                                    <div class="relative">
+                                        <input type="checkbox" class="sr-only" id="check4">
+                                        <div class="w-5 h-5 border border-gray-300 rounded bg-white"></div>
+                                        <div class="absolute inset-0 hidden w-5 h-5 flex items-center justify-center bg-primary rounded" id="check4-bg">
+                                            <i class="ri-check-line text-white ri-sm"></i>
+                                        </div>
+                                    </div>
+                                    <span class="ml-3 text-gray-700">Regular physical examinations</span>
+                                </label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <label class="flex items-center cursor-pointer">
+                                    <div class="relative">
+                                        <input type="checkbox" class="sr-only" id="check5">
+                                        <div class="w-5 h-5 border border-gray-300 rounded bg-white"></div>
+                                        <div class="absolute inset-0 hidden w-5 h-5 flex items-center justify-center bg-primary rounded" id="check5-bg">
+                                            <i class="ri-check-line text-white ri-sm"></i>
+                                        </div>
+                                    </div>
+                                    <span class="ml-3 text-gray-700">Body Mass Index (BMI) monitoring</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-medium text-gray-900 mb-3">Recommended Screening Schedule</h4>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Test</th>
+                                        <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Frequency</th>
+                                        <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Age Group</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">Blood Pressure</td>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">Every 2 years</td>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">18+</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">Cholesterol</td>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">Every 4-6 years</td>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">20+</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">Blood Glucose</td>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">Every 3 years</td>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">45+</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">ECG</td>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">As recommended</td>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">40+</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-white p-8 rounded-lg shadow-sm">
+                <h3 class="text-xl font-semibold text-gray-900 mb-6">Track Your Prevention Progress</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-medium text-gray-900">Blood Pressure</h4>
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
+                                <i class="ri-pulse-line text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="text-3xl font-bold text-gray-900">120/80</div>
+                                <div class="text-sm text-gray-500">Last reading</div>
+                            </div>
+                            <div class="text-sm px-2 py-1 bg-green-100 text-green-800 rounded">Normal</div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-green-500 rounded-full" style="width: 70%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>90/60</span>
+                                <span>120/80</span>
+                                <span>140/90</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-medium text-gray-900">Cholesterol</h4>
+                            <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full">
+                                <i class="ri-test-tube-line text-blue-600"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="text-3xl font-bold text-gray-900">185</div>
+                                <div class="text-sm text-gray-500">mg/dL</div>
+                            </div>
+                            <div class="text-sm px-2 py-1 bg-green-100 text-green-800 rounded">Desirable</div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-green-500 rounded-full" style="width: 60%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>0</span>
+                                <span>200</span>
+                                <span>240+</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-medium text-gray-900">Blood Glucose</h4>
+                            <div class="w-8 h-8 flex items-center justify-center bg-purple-100 rounded-full">
+                                <i class="ri-drop-line text-purple-600"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <div class="text-3xl font-bold text-gray-900">95</div>
+                                <div class="text-sm text-gray-500">mg/dL (fasting)</div>
+                            </div>
+                            <div class="text-sm px-2 py-1 bg-green-100 text-green-800 rounded">Normal</div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-green-500 rounded-full" style="width: 50%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                <span>70</span>
+                                <span>100</span>
+                                <span>126+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Tips -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Practical Prevention Tips</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Incorporate these simple, actionable tips into your daily routine to protect yourself from NCDs and enhance your quality of life.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm p-6 hover:shadow-md transition">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4 mx-auto">
+                        <i class="ri-run-line text-primary ri-lg"></i>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2 text-center">Stay Active</h4>
+                    <p class="text-gray-600 text-sm text-center">Take a 30-minute walk daily, use stairs instead of elevators, or join a local fitness class to boost heart health and energy levels.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm p-6 hover:shadow-md transition">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4 mx-auto">
+                        <i class="ri-restaurant-line text-blue-600 ri-lg"></i>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2 text-center">Eat Smart</h4>
+                    <p class="text-gray-600 text-sm text-center">Swap processed snacks for fruits, reduce salt by cooking at home, and aim for 5 servings of vegetables daily to support your body.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm p-6 hover:shadow-md transition">
+                    <div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full mb-4 mx-auto">
+                        <i class="ri-mental-health-line text-green-600 ri-lg"></i>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2 text-center">Manage Stress</h4>
+                    <p class="text-gray-600 text-sm text-center">Try 10 minutes of deep breathing, meditate before bed, or practice gratitude to lower stress and protect against hypertension.</p>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">More Prevention Tips</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="bg-primary/10 p-8 rounded-lg shadow-sm text-center">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Take the Next Step</h3>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Prevention starts with awareness and action. Assess your risk, track your progress, and consult a healthcare provider for tailored guidance.</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">Take Risk Assessment</button>
+                    <button class="bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 py-3 px-6 rounded-button font-medium whitespace-nowrap">Explore Resources</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-['Pacifico'] text-white">Dr Kimemia</span>
+                        <div class="w-6 h-6 flex items-center justify-center ml-1">
+                            <i class="ri-heart-pulse-fill text-primary ri-lg"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Providing evidence-based information on heart health and non-communicable diseases since 2010.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-instagram-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-youtube-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Heart Disease</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Diabetes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Hypertension</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Stroke</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Research Papers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Health Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Video Library</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Risk Assessment Tools</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Information</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">123 Medical Center Drive<br>Boston, MA 02115</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">info@heartwise.org</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400">+1 (617) 555-0123</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Dr Kimemia. All rights reserved. Last updated: June 8, 2025</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Medical Disclaimer</a>
+                    </div>
+                </div>
+                <p class="text-gray-500 text-xs mt-4">The information provided on this website is for general informational and educational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script id="checkbox-functionality">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Custom checkbox functionality
+            const checkboxes = ['check1', 'check2', 'check3', 'check4', 'check5'];
+            
+            checkboxes.forEach(id => {
+                const checkbox = document.getElementById(id);
+                const bg = document.getElementById(`${id}-bg`);
+                
+                if (checkbox && bg) {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            bg.classList.remove('hidden');
+                        } else {
+                            bg.classList.add('hidden');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

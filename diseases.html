@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartWise - Diseases</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e63946',
+                        secondary: '#457b9d'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="flex items-center">
+                    <span class="text-primary text-3xl font-['Pacifico']">Dr Kimemia</span>
+                    <div class="w-8 h-8 flex items-center justify-center ml-1">
+                        <i class="ri-heart-pulse-fill text-primary ri-lg"></i>
+                    </div>
+                </div>
+                <nav class="hidden md:flex ml-10">
+                    <ul class="flex space-x-8">
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Home</a></li>
+                        <li><a href="#" class="text-primary font-medium">Diseases</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Prevention</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">Resources</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary transition">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search health topics..." class="pl-10 pr-4 py-2 rounded-full text-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary w-64">
+                    <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+                        <i class="ri-search-line"></i>
+                    </div>
+                </div>
+                <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-button flex items-center whitespace-nowrap">
+                    <div class="w-5 h-5 flex items-center justify-center mr-2">
+                        <i class="ri-phone-fill"></i>
+                    </div>
+                    Emergency
+                </button>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center py-20" style="background-image: url('https://readdy.ai/api/search-image?query=A%20professional%20medical%20background%20with%20a%20gradient%20from%20white%20to%20soft%20blue%2C%20featuring%20subtle%20heart%20and%20medical%20symbols.%20The%20left%20side%20should%20be%20completely%20white%20or%20very%20light%20for%20text%20placement%2C%20while%20the%20right%20side%20can%20show%20a%20stylized%20anatomical%20heart%20illustration%20with%20blood%20vessels.%20The%20transition%20must%20be%20natural%20and%20seamless.&width=1600&height=800&seq=1&orientation=landscape');">
+        <div class="container mx-auto px-4 w-full">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">Non-Communicable Diseases</h1>
+                    <p class="text-lg text-gray-700 mb-8 max-w-lg">Explore detailed information on heart disease, diabetes, hypertension, and stroke—key NCDs affecting millions worldwide. Learn symptoms, risks, and management strategies.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">Browse Diseases</button>
+                        <button class="bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 py-3 px-6 rounded-button font-medium whitespace-nowrap">Take Risk Assessment</button>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- The hero image is already in the background -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disease Navigation -->
+    <section class="bg-white py-8 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#heart-disease" class="flex flex-col items-center p-4 rounded hover:bg-gray-50 transition group">
+                    <div class="w-16 h-16 flex items-center justify-center bg-red-100 rounded-full mb-3 group-hover:bg-red-200 transition">
+                        <i class="ri-heart-pulse-line text-primary ri-2x"></i>
+                    </div>
+                    <span class="font-medium text-gray-900">Heart Disease</span>
+                </a>
+                <a href="#diabetes" class="flex flex-col items-center p-4 rounded hover:bg-gray-50 transition group">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-3 group-hover:bg-blue-200 transition">
+                        <i class="ri-test-tube-line text-blue-600 ri-2x"></i>
+                    </div>
+                    <span class="font-medium text-gray-900">Diabetes</span>
+                </a>
+                <a href="#hypertension" class="flex flex-col items-center p-4 rounded hover:bg-gray-50 transition group">
+                    <div class="w-16 h-16 flex items-center justify-center bg-green-100 rounded-full mb-3 group-hover:bg-green-200 transition">
+                        <i class="ri-pulse-line text-green-600 ri-2x"></i>
+                    </div>
+                    <span class="font-medium text-gray-900">Hypertension</span>
+                </a>
+                <a href="#stroke" class="flex flex-col items-center p-4 rounded hover:bg-gray-50 transition group">
+                    <div class="w-16 h-16 flex items-center justify-center bg-purple-100 rounded-full mb-3 group-hover:bg-purple-200 transition">
+                        <i class="ri-brain-line text-purple-600 ri-2x"></i>
+                    </div>
+                    <span class="font-medium text-gray-900">Stroke</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disease Sections -->
+    <section class="py-16 bg-gray-50" id="diseases">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Understanding Non-Communicable Diseases</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Dive into the causes, symptoms, risk factors, and management strategies for major NCDs to empower yourself with knowledge for better health.</p>
+            </div>
+
+            <!-- Heart Disease Section -->
+            <div id="heart-disease" class="bg-white p-8 rounded-lg shadow-sm mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="h-64 md:h-auto bg-cover bg-center rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=A%20detailed%20medical%20illustration%20of%20a%20human%20heart%20with%20visible%20arteries%20and%20blood%20vessels%20against%20a%20clean%20white%20background.%20The%20image%20should%20be%20anatomically%20accurate%20but%20slightly%20stylized%20for%20clarity%2C%20showing%20the%20structure%20of%20a%20healthy%20heart%20with%20good%20detail%20of%20coronary%20arteries.&width=600&height=400&seq=2&orientation=landscape');"></div>
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-red-100 rounded-full mr-3">
+                                <i class="ri-heart-pulse-line text-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-900">Heart Disease</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Heart disease encompasses conditions affecting the heart's structure and function, such as coronary artery disease, heart failure, and arrhythmias. It’s the leading cause of death globally, claiming 17.9 million lives annually.</p>
+                        <div class="mb-4">
+                            <span class="inline-block px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">High Risk</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Symptoms</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Chest pain or discomfort (angina)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Shortness of breath
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Fatigue, weakness, or irregular heartbeat
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Risk Factors</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        High blood pressure, high cholesterol
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Smoking, obesity, physical inactivity
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Family history, diabetes
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Prevention & Management</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Eat a heart-healthy diet (e.g., DASH or Mediterranean)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Exercise regularly (150 min/week moderate activity)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Manage stress, quit smoking, and monitor blood pressure
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="w-full bg-white hover:bg-gray-50 text-primary border border-primary py-2 px-4 rounded-button font-medium whitespace-nowrap">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diabetes Section -->
+            <div id="diabetes" class="bg-white p-8 rounded-lg shadow-sm mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="h-64 md:h-auto bg-cover bg-center rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=A%20medical%20illustration%20showing%20insulin%20and%20blood%20sugar%20levels%20in%20the%20human%20body.%20The%20image%20should%20show%20glucose%20molecules%20in%20the%20bloodstream%20and%20insulin%20interaction%2C%20with%20a%20clean%20white%20background.%20Include%20a%20visual%20representation%20of%20pancreas%20and%20insulin%20production%20for%20educational%20purposes.&width=600&height=400&seq=3&orientation=landscape');"></div>
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+                                <i class="ri-test-tube-line text-blue-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-900">Diabetes</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Diabetes is a chronic condition affecting blood sugar (glucose) processing, with Type 1, Type 2, and gestational variants. Over 537 million adults live with diabetes as of 2021.</p>
+                        <div class="mb-4">
+                            <span class="inline-block px-3 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">Increasing Prevalence</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Symptoms</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-blue-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Increased thirst and frequent urination
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-blue-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Unexplained weight loss
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-blue-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Fatigue, blurred vision, slow-healing sores
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Risk Factors</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-blue-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Obesity, physical inactivity
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-blue-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Family history, age (45+)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-blue-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        High blood pressure, gestational diabetes history
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Prevention & Management</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-blue-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Maintain a healthy weight, balanced diet
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-blue-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Regular exercise (150 min/week)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-blue-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Monitor blood sugar, take prescribed medications
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="w-full bg-white hover:bg-gray-50 text-blue-600 border border-blue-600 py-2 px-4 rounded-button font-medium whitespace-nowrap">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hypertension Section -->
+            <div id="hypertension" class="bg-white p-8 rounded-lg shadow-sm mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="h-64 md:h-auto bg-cover bg-center rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=A%20medical%20illustration%20showing%20blood%20pressure%20in%20arteries%2C%20with%20a%20visual%20representation%20of%20how%20hypertension%20affects%20blood%20vessels.%20The%20image%20should%20show%20a%20comparison%20between%20normal%20and%20constricted%20arteries%20with%20blood%20flow%2C%20against%20a%20clean%20white%20background.%20Include%20a%20blood%20pressure%20gauge%20or%20measurement%20visualization.&width=600&height=400&seq=4&orientation=landscape');"></div>
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full mr-3">
+                                <i class="ri-pulse-line text-green-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-900">Hypertension luminosity</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Hypertension, or high blood pressure, occurs when the force of blood against artery walls is consistently elevated. An estimated 1.28 billion adults aged 30-79 have it, often undetected.</p>
+                        <div class="mb-4">
+                            <span class="inline-block px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Often Undetected</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Symptoms</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Often asymptomatic ("silent killer")
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Severe cases: headaches, nosebleeds
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Shortness of breath, chest pain
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Risk Factors</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Age, family history, obesity
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        High salt intake, stress
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Smoking, excessive alcohol use
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Prevention & Management</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Reduce salt, eat fruits and vegetables
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Exercise regularly, maintain healthy weight
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-green-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Monitor blood pressure, take medications as prescribed
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="w-full bg-white hover:bg-gray-50 text-green-600 border border-green-600 py-2 px-4 rounded-button font-medium whitespace-nowrap">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stroke Section -->
+            <div id="stroke" class="bg-white p-8 rounded-lg shadow-sm mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="h-64 md:h-auto bg-cover bg-center rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=A%20medical%20illustration%20of%20a%20human%20brain%20showing%20a%20stroke%20event%2C%20with%20visible%20blood%20vessels%20and%20affected%20areas.%20The%20image%20should%20clearly%20show%20the%20difference%20between%20ischemic%20and%20hemorrhagic%20stroke%20mechanisms%20in%20the%20brain%20tissue%2C%20against%20a%20clean%20white%20background.%20Include%20visual%20indicators%20of%20blood%20flow%20disruption.&width=600&height=400&seq=5&orientation=landscape');"></div>
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-purple-100 rounded-full mr-3">
+                                <i class="ri-brain-line text-purple-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-900">Stroke</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">A stroke occurs when blood supply to the brain is interrupted, either by a blockage (ischemic) or bleeding (hemorrhagic), causing brain cells to die rapidly.</p>
+                        <div class="mb-4">
+                            <span class="inline-block px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">Medical Emergency</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Symptoms</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-purple-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Sudden numbness or weakness (face, arm, leg)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-purple-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Confusion, trouble speaking or understanding
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-purple-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Severe headache, dizziness, loss of balance
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Risk Factors</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-purple-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Hypertension, smoking, diabetes
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-purple-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        High cholesterol, obesity, age (55+)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-purple-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Family history, atrial fibrillation
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-700 mb-2">Prevention & Management</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-purple-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Control blood pressure, cholesterol
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-purple-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Quit smoking, exercise regularly
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-4 h-4 flex items-center justify-center mt-0.5 mr-2 text-purple-600">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                        </div>
+                                        Seek immediate care for symptoms (FAST: Face, Arm, Speech, Time)
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="w-full bg-white hover:bg-gray-50 text-purple-600 border border-purple-600 py-2 px-4 rounded-button font-medium whitespace-nowrap">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="bg-primary/10 p-8 rounded-lg shadow-sm text-center">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Take Control of Your Health</h3>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Understanding these diseases is the first step. Assess your risk, adopt preventive measures, and consult a healthcare provider for personalized advice.</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">Take Risk Assessment</button>
+                    <button class="bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 py-3 px-6 rounded-button font-medium whitespace-nowrap">Explore Resources</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-['Pacifico'] text-white">Dr Kimemia</span>
+                        <div class="w-6 h-6 flex items-center justify-center ml-1">
+                            <i class="ri-heart-pulse-fill text-primary ri-lg"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Providing evidence-based information on heart health and non-communicable diseases since 2010.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-instagram-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                            <i class="ri-youtube-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Heart Disease</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Diabetes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Hypertension</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Stroke</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Research Papers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Health Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Video Library</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Risk Assessment Tools</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Information</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">123 Medical Center Drive<br>Boston, MA 02115</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">info@heartwise.org</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-gray-400">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400">+1 (617) 555-0123</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Dr Kimemia. All rights reserved. Last updated: June 8, 2025</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Medical Disclaimer</a>
+                    </div>
+                </div>
+                <p class="text-gray-500 text-xs mt-4">The information provided on this website is for general informational and educational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
